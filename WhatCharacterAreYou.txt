@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace What_Character_Are_You
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string q1 = "What kind of person are you?";
+            string q2 = "What is your weapon of choice?";
+            string q3 = "What is your view of an honorable death?";
+            string q4 = "What is your method for success?";
+            string q5 = "What would your battle attire look like?";
+            int user = 0;
+            int s = 0;
+            Console.WriteLine(q1);
+            Console.WriteLine("1  Lover");
+            Console.WriteLine("2  User");
+            Console.WriteLine("3  Seductive");
+            Console.WriteLine("4  Vengeful");
+            Console.WriteLine("5  Sadistic");
+            user = Convert.ToInt32(Console.ReadLine());
+            s = s + user;
+
+            Console.WriteLine(q2);
+            Console.WriteLine("1  Hands");
+            Console.WriteLine("2  Guns");
+            Console.WriteLine("3  Poison");
+            Console.WriteLine("4  Swords");
+            Console.WriteLine("5  Mideval");
+            user = Convert.ToInt32(Console.ReadLine());
+            s = s + user;
+
+            Console.WriteLine(q3);
+            Console.WriteLine("1  I'll never die!");
+            Console.WriteLine("2  I will die only by the hands of the best!");
+            Console.WriteLine("3  There is no honorable death!");
+            Console.WriteLine("4  A humble and respectful death");
+            Console.WriteLine("5  Sacrafice myself for my Master");
+            user = Convert.ToInt32(Console.ReadLine());
+            s = s + user;
+
+            Console.WriteLine(q4);
+            Console.WriteLine("1  Hard work");
+            Console.WriteLine("2  Manipulate people to get ahead");
+            Console.WriteLine("3  My hypnotic sex appeal.");
+            Console.WriteLine("4  Quick thinking is the key!");
+            Console.WriteLine("5  Unstoppable drive");
+            user = Convert.ToInt32(Console.ReadLine());
+            s = s + user;
+
+            Console.WriteLine(q5);
+            Console.WriteLine("1  Flashy");
+            Console.WriteLine("2  Comfortable");
+            Console.WriteLine("3  Classy");
+            Console.WriteLine("4  Cultural tradition");
+            Console.WriteLine("5  Deception by appearance");
+            user = Convert.ToInt32(Console.ReadLine());
+            s = s + user;
+
+            if (s <= 9)
+            {
+                Console.WriteLine("You are Beatrix Kiddo");
+            } 
+            else if (s > 9 && s <= 14)
+            {
+                Console.WriteLine("You are Bill");
+            } 
+            else if (s > 15 && s <= 19)
+            {
+                Console.WriteLine("You are Elle Driver");
+            } 
+            else if (s > 20 && s <= 23)
+            {
+                Console.WriteLine("You are O'Ren Ishii");
+            } 
+            else if (s > 23 && s <= 25)
+            {
+                Console.WriteLine("You are GoGo Yubari");
+             
+            }
+        }
+         
+    }
+}

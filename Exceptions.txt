@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CommonIOEx
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string fileName = "somefile.text"; //= Can not find file somefile.text
+            //string fileName = "..\\somefile.txt"; // = Cannot open the file ..\\somefile.txt
+            //string fileName = @"somedir\somefile.txt"; = invalid directory in a file path
+            try
+            {
+                StreamReader reader = new StreamReader(fileName);
+                Console.WriteLine("File {0} successfully opened.", fileName);
+                Console.WriteLine("File contents:");
+                using (reader)
+                {
+                    Console.WriteLine(reader.ReadToEnd());
+                } //this will close the file
+            }
+            catch (FileNotFoundException)
+            {
+                Console.Error.WriteLine(
+                    "Can not find file {0}.", fileName);
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Console.Error.WriteLine(
+                    "Invalid directory in the file path.");
+            }
+            catch (IOException)
+            {
+                Console.Error.WriteLine("Cannot open the file {0}", fileName);
+
+            }
+        }
+    }
+}
