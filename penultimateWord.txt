@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace penultimate_word
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string line = "some line with text";
+            string [] lineAry = line.Split();
+            string word = lineAry[lineAry.Length - 2];
+            System.Console.WriteLine(word);
+
+            System.Console.ReadLine();
+        }
+    }  
+  
+
+}

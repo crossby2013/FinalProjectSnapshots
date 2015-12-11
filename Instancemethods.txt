@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Instance_methods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String samplelower = new string('a', 5);
+            String sampleUpper = samplelower.ToUpper();
+            Console.WriteLine(samplelower);
+            Console.WriteLine(sampleUpper);
+
+            DateTime now = DateTime.Now;
+            DateTime later = now.AddHours(8);
+
+            Console.WriteLine("Now: {0}", now);
+            Console.WriteLine("8 hours later: {0}" , later);
+            Console.ReadLine();
+        }
+    }
+}

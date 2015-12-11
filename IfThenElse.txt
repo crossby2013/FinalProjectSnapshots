@@ -1,0 +1,23 @@
+namespace ifThenElse
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string userReply;
+            int userAge;
+            System.Console.WriteLine("What's your age?");
+            userReply = System.Console.ReadLine();
+            userAge = int.Parse (userReply);
+
+            if (userAge >= 17) {
+                System.Console.WriteLine("Have a good time!!!");
+            }
+            else {
+                System.Console.WriteLine("You are not allowed entry");
+            } 
+            System.Console.ReadLine();
+
+        }
+    }
+}

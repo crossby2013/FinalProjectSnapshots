@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Queue
+{
+    class Queue
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> firstQ = new Queue<string>();
+	        firstQ.Enqueue("first element");//Enqueue append an element to the end of a queue
+            firstQ.Enqueue("second element");
+            firstQ.Enqueue("third element");
+
+            foreach (string item in firstQ)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(firstQ.Dequeue());//Dequeue retrieve an element from the start of a queue
+            Console.WriteLine(firstQ.Peek());//Peek returns the element from the beginning of the queue without removing it
+            firstQ.Clear();//removes all elements from the queue
+            Console.WriteLine(firstQ.Contains("third element"));
+        }
+    }
+}

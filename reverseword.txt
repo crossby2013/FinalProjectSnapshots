@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Reverse_Words
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string store = "";
+           
+            string rev1 = "Hello World";
+            string[] hello = rev1.Split();
+            Array.Reverse(hello);
+            foreach (string result in hello)
+           {
+               store = store + " " + result;
+              
+            }
+              System.Console.WriteLine(store);
+              System.Console.ReadLine();
+         }
+        
+              
+    }
+          
+            
+}

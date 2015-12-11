@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrailingStrings
+{
+    class Trailingstring
+    {
+        static void Main(string[] args)
+        {
+            string line = "Hello World,Cat";
+            //gives position of (,)
+            int indexNum = line.IndexOf(',');
+            //+1 so it won't print out the (,) and then the word
+            string keyword = line.Substring(indexNum +1);
+            //0 is the starting index and end at the (,)
+            string newline = line.Substring(0, indexNum );
+            Console.WriteLine(keyword);
+            Console.WriteLine(newline);
+            //looking for keyword inside of newline
+            //
+            if(newline.IndexOf(keyword) != -1)
+            {
+                 Console.WriteLine("1");
+            }
+            else
+            {
+                Console.WriteLine("0");
+            }
+        }
+    }
+}

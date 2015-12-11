@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RemoveCharacters
+{
+    class RemoveCharacters
+    {
+        static void Main(string[] args)
+        {
+            string line = "how are you, abc";
+            int remove = line.IndexOf(',');
+            string newline = line.Substring(0, remove);
+
+
+            Console.WriteLine(newline);
+
+
+        }
+    }
+}

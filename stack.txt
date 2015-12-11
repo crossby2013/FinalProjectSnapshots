@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StackChallenge
+{
+    class StackChallenge
+    {
+        static void Main(string[] args)
+        {
+            
+            Stack<int> ReverseOrder = new Stack<int>();
+         
+            Console.WriteLine("Please give me a sequence of numbers?");//print question for user input
+            for (int i = 0; i < 5; i++)//i equals 0, i is < than 5=able to list of up 5 numbers, i adds 1
+            {
+             
+                ReverseOrder.Push(int.Parse(Console.ReadLine()));//stack will push which adds a new element on the top of the stack and convert to an int. Read the users reply
+            }
+            int[] arr1 = ReverseOrder.ToArray();// create int array for the stack which returns an array, containing all elements of the stack
+            ReverseOrder.Clear();//Clears out the stack
+            foreach (int item in arr1)//loop item in array
+            {
+                ReverseOrder.Push(item);//stack will push item
+            }
+            foreach (int item in ReverseOrder)//loop item in stack
+            {
+                Console.WriteLine(item);//print out item
+            }
+            Console.ReadLine();//keeps console open
+          }
+        }
+    }

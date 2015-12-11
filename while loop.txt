@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace While_loop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double decNum = .5;
+            while (decNum <= 50.34)
+            {
+                System.Console.WriteLine(" You're " + decNum + " so you're an alien "); decNum++;
+            }
+            System.Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PracticeMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //ToUpper();
+            string wordUp = "my nephew's first football game is today!!!!";
+            Console.WriteLine(wordUp.ToUpper());
+            
+            //ToLower();
+            string wordLow = "MY Nephew's First FOOTBALL Game Is TODAY!!!!";
+            Console.WriteLine(wordLow.ToLower());
+            
+            //Substring();
+            string input = "CatDogChallenge";
+            string sub = input.Substring(6 , 9);
+            Console.WriteLine("Substring: {0}", sub);
+
+            //Trim();
+            string firstname = " Brittany ";
+            string name = (firstname.Trim());
+            Console.WriteLine(name);
+
+            //Split();
+            string address = " 4584 Wilburn Dr South Euclid 44121 ";
+            string [] street = address.Split(' ');
+            foreach(string word in street)
+            {
+                Console.WriteLine(word);
+            }
+           
+            //String.Format();
+            int age = 26;
+            string life = string.Format( "My name is {0} and I am {1} years old " , firstname , age );
+            Console.WriteLine(life);
+            
+            //IndexOf();
+            string s1 = "irritating ";
+            Console.WriteLine(s1.IndexOf("a"));
+
+
+            //LastIndexOf();
+            string s2 = "irritating";
+            Console.WriteLine(s2.LastIndexOf("t"));
+            
+            //CompareTo();
+            int a = 3;
+            int b = 7;
+            int c = 2;
+            int ac = a.CompareTo(c);
+            int cb = c.CompareTo(b);
+            int ba = b.CompareTo(a);
+            Console.WriteLine(ac);
+            Console.WriteLine(cb);
+            Console.WriteLine(ba);
+
+            //Equals();
+            if (ac.Equals(ba))
+            {
+                Console.WriteLine("ac.Equals(ba) = true");
+            }
+
+            //Concat();
+            string concat = " Cats ";
+            string concat2 = " and Dogs ";
+            string concat3 = string.Concat("Raining ", concat , concat2);
+            Console.WriteLine(concat3);
+           
+            //Replace();
+            Console.WriteLine(concat3);
+            string s = concat3.Replace("Cats", "Lions");
+            Console.WriteLine(s);
+        }
+    }
+}

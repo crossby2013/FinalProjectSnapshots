@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LongestWord
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string longestWord = "";
+            string line =  "some line with text ";
+            string[] array = line.Split();
+        
+            for (int i = 0; i < array.Length; i ++)
+            {
+                if (longestWord.Length < array[i].Length)
+                {
+                    longestWord = array[i];
+                }
+                else if (longestWord.Length == array[i].Length)
+                {
+                    longestWord = longestWord;
+                }
+
+
+           
+                
+
+            }
+
+            System.Console.WriteLine(longestWord);
+            
+            System.Console.ReadLine();
+
+        }    
+    }
+}

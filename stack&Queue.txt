@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StacksandQues
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Stack<string> newStack = new Stack<string>();
+	        //newStack.Push("first element");
+            //newStack.Push("second element");
+            //newStack.Push("third element");
+
+            //foreach (string stack in newStack)
+            //{
+               // Console.WriteLine(stack);
+           // }
+
+            Stack<string> FunActivities = new Stack<string>();
+            FunActivities.Push("Skydiving");// Push adds new element to top of a stack
+            FunActivities.Push("Hiking");
+            FunActivities.Push("Horseback riding");
+            FunActivities.Push("Skiing");
+            Console.WriteLine(FunActivities.Peek());//Peek returns the highest element without removing it from the stack
+            string[] Adventure = FunActivities.ToArray();//ToArray returns an array, containing all elements of the stack
+            foreach (string item in Adventure)
+
+            {
+                Console.WriteLine(item);
+            }
+           Console.WriteLine(FunActivities.Contains("Skydiving")); //Contains check whether the stack contains the elements
+           while (FunActivities.Count > 0)//Count returns the length of elements in the stack
+           {
+                string Fun = FunActivities.Pop();//Pop returns the highest element and removes it from stack
+                Console.WriteLine(Fun);
+               
+               
+           }
+                FunActivities.Clear();//Clear retrieves all elements from stack
+
+         
+        }
+
+        
+    }
+}
